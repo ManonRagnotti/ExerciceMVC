@@ -9,20 +9,19 @@ function App() {
     <div className="App">
       <header>
     	<ul>
-            {model.data.map((item, i) => (
+            {model.data.map((name, i) => (
                 <li><a onClick={Controller.showContent} index={i}>{model.data[i].name}</a></li>
             ))}
     	</ul>
     	</header>
     	<div className="container">
             {model.data.map((content, i) => (
-
                 <div index={i}>{model.data[i].content}</div>
             ))}
     	</div>
     	<footer>
     	<ul>
-            {model.data.map((item, i) => (
+            {model.data.map((name, i) => (
                 <li><a onClick={Controller.showContent}  index={i}>{model.data[i].name}</a></li>
             ))}
     	</ul>

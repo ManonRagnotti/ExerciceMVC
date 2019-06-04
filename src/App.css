@@ -28,6 +28,6 @@ footer {
 * CONTENT
 * */
 .container {
-  display: none;
+  /* display: none; */
   margin-top: 20%;
 }

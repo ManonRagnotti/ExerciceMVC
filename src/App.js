@@ -15,9 +15,10 @@ function App() {
     	</ul>
     	</header>
     	<div className="container">
-    		<div>{model.data[0].content}</div>
-    		<div>{model.data[1].content}</div>
-    		<div>{model.data[2].content}</div>
+            {model.data.map((content, i) => (
+
+                <div index={i}>{model.data[i].content}</div>
+            ))}
     	</div>
     	<footer>
     	<ul>

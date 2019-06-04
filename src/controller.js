@@ -3,6 +3,7 @@ import model from './model.json';
 
 
 class Controller extends React.Component {
+
     // const itemsMenu = document.querySelectorAll('a');
     //
     // itemsMenu.forEach(function(itemMenu) {
@@ -11,12 +12,32 @@ class Controller extends React.Component {
     //
     //
     //
-    // // const menu = model.data;
+
     //
     // console.log(itemMenu);
 
-    const showContent = () => {
-      console.log("click")
+    static showContent = (event) => {
+
+        const items = Array.from(document.querySelectorAll('a'));
+
+        items.forEach((item) => {
+            const index = item.getAttribute('index');
+            console.log(index);
+        });
+
+
+
+
+        // const menu = model.data;
+        // console.log(menu);
+        // menu.map(function(item, i) {
+        //     for (let i = 0; i < menu.length; i++) {
+        //         if (menu[i].name) {
+        //             return menu[i].content
+        //         }
+        //     }
+        //     return console.log(model.data[i].content)
+        // });
     }
 }
 
@@ -43,7 +64,7 @@ export default Controller;
 
 
 // menu.forEach((item) => {
-	// model.data.addEventListener('click', (e) => {
+// model.data.addEventListener('click', (e) => {
 // 		if (!isSmallMedia()) {
 // 			e.preventDefault();
 // 			const elemNext = document.querySelector(itemsDesktopNext[index]);

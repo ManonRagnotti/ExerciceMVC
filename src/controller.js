@@ -20,12 +20,27 @@ class Controller extends React.Component {
 
         const items = Array.from(document.querySelectorAll('a'));
 
-        items.forEach((item) => {
-            const index = item.getAttribute('index');
+        // items.forEach((item) => {
+        //     const index = item.getAttribute('index');
+        //     console.log(index);
+        // });
+        console.log(items);
+        for (let i = 0; i < items.length; i++) {
+            const index = items[i].getAttribute('index');
             console.log(index);
-        });
-
-
+            if (index === 0 ) {
+                return model.data[0].content;
+                console.log(model.data[0].content);
+            }
+            else if (index === 1 ) {
+                return model.data[1].content;
+                console.log(model.data[1].content);
+            }
+            else if (index === 2 ) {
+                return model.data[2].content;
+                console.log(model.data[2].content);
+            }
+        }
 
 
         // const menu = model.data;

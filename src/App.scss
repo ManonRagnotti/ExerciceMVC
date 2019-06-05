@@ -16,6 +16,10 @@ ul {
 
 li {
   cursor: pointer;
+
+  .active {
+      font-weight: bold;
+  }
 }
 
 footer {
@@ -28,6 +32,11 @@ footer {
 * CONTENT
 * */
 .container {
-  /* display: none; */
-  margin-top: 20%;
+    margin-top: 20%;
+    div{
+        display: none;
+        &.activeContent {
+            display: block;
+        }
+    }
 }

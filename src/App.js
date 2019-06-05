@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import model from './model.json';
 import Controller from './controller.js';
 
@@ -16,7 +16,7 @@ function App() {
     	</header>
     	<div className="container">
             {model.data.map((content, i) => (
-                <div index={i}>{model.data[i].content}</div>
+                <div index={i} >{model.data[i].content}</div>
             ))}
     	</div>
     	<footer>

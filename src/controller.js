@@ -2,60 +2,54 @@ import React from 'react';
 import model from './model.json';
 
 
-class Controller {
+class Controller extends React.Component {
+
 
     static showContent = (index) => {
 
+        const allItems = Array.from(document.querySelectorAll('a'));
+
+        allItems.forEach((element, index) => {
+            if (element.className === 'active') {
+                element.classList.remove('active');
+            }
+        })
+
+        //Récupère l'element click
         const element = index.target;
+        //Retourne l'index de l'element click
         const indexElement = parseInt(element.getAttribute('index'));
 
-        // console.log(indexElement); //Retourne l'index de l'element click
+        //Selection et affichage des div contenu
+        const divContent = Array.from(document.querySelectorAll('.container div'));
 
-        const content = model.data[indexElement].content;
+        divContent.forEach((el, index) => {
+            if (index === indexElement) {
+                el.classList.add('activeContent');
+                element.classList.add('active');
 
-        return model.data[indexElement].content;
+            } else {
+                el.classList.remove('activeContent');
+            }
 
-        if (indexElement === 0) {
-            return model.data[0].content;
-            console.log(model.data[0].content);
-        }
+        })
 
-
-        // index.target.style.visibility = 'hidden';
-
-        // const items = Array.from(document.querySelectorAll('a'));
+        // divContent.forEach((element, index) => {
+        //     if (index === indexElement) {
+        //         element.classList.add('active');
         //
-        // items.forEach((item) => {
-        //     const index = item.getAttribute('index');
-        //     console.log(index);
-        // });
-        // // console.log(item.getAttribute('index'));
-        // for (let i = 0; i < items.length; i++) {
-        //     const index = items[i].getAttribute('index');
-        //     console.log(index);
-            // if (index === 0 ) {
-            //     return model.data[0].content;
-            //     console.log(model.data[0].content);
-            // }
-            // else if (index === 1 ) {
-            //     return model.data[1].content;
-            //     console.log(model.data[1].content);
-            // }
-            // else if (index === 2 ) {
-            //     return model.data[2].content;
-            //     console.log(model.data[2].content);
-            // }
-        }
-        // const menu = model.data;
-        // console.log(menu);
-        // menu.map(function(item, i) {
-        //     for (let i = 0; i < menu.length; i++) {
-        //         if (menu[i].name) {
-        //             return menu[i].content
-        //         }
+        //     } else {
+        //         element.classList.remove('active');
         //     }
-        //     return console.log(model.data[i].content)
-        // });
+        // })
+        //
+        // if (divContent.hasAttributes('data-paused')) {
+        //
+        // }
+        // console.log(divContent);
+
+    }
+
 }
 
 export default Controller;

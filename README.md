@@ -2,7 +2,7 @@
 
 ##### `yarn install`
 ##### `yarn add node-sass`
-##### `yarn start
+##### `yarn start`
 
 
 

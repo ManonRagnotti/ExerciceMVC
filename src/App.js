@@ -22,7 +22,7 @@ function App() {
     	<footer>
     	<ul>
             {model.data.map((name, i) => (
-                <li><a onClick={Controller.showContent}  index={i}>{model.data[i].name}</a></li>
+                <li><a onClick={Controller.showContent} index={i}>{model.data[i].name}</a></li>
             ))}
     	</ul>
     	</footer>

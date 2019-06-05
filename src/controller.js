@@ -2,13 +2,12 @@ import React from 'react';
 import model from './model.json';
 
 
-class Controller extends React.Component {
+class Controller {
 
 
     static showContent = (index) => {
 
         const allItems = Array.from(document.querySelectorAll('a'));
-
         allItems.forEach((element, index) => {
             if (element.className === 'active') {
                 element.classList.remove('active');
@@ -22,7 +21,6 @@ class Controller extends React.Component {
 
         //Selection et affichage des div contenu
         const divContent = Array.from(document.querySelectorAll('.container div'));
-
         divContent.forEach((el, index) => {
             if (index === indexElement) {
                 el.classList.add('activeContent');
@@ -31,22 +29,7 @@ class Controller extends React.Component {
             } else {
                 el.classList.remove('activeContent');
             }
-
         })
-
-        // divContent.forEach((element, index) => {
-        //     if (index === indexElement) {
-        //         element.classList.add('active');
-        //
-        //     } else {
-        //         element.classList.remove('active');
-        //     }
-        // })
-        //
-        // if (divContent.hasAttributes('data-paused')) {
-        //
-        // }
-        // console.log(divContent);
 
     }
 
